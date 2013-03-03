@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.shuffla.poker</groupId>
+  <artifactId>PokerParent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>Poker</module>
+  	<module>Bot</module>
+  	<module>Main</module>
+  	<module>Domain</module>
+  </modules>
+  
+  <properties>
+    <guice-version>3.0</guice-version>
+    <commons-lang-version>3.1</commons-lang-version>
+    <slf4j-log4j12-version>1.7.2</slf4j-log4j12-version>
+  </properties>
+</project>

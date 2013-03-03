@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.shuffla.poker</groupId>
+    <artifactId>PokerParent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>Main</artifactId>
+  
+  <dependencies>
+    <dependency>
+	  <groupId>com.google.inject</groupId>
+	  <artifactId>guice</artifactId>
+	  <version>${guice-version}</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.apache.commons</groupId>
+	  	<artifactId>commons-lang3</artifactId>
+	  	<version>${commons-lang-version}</version> 
+    </dependency>
+    
+    <dependency>
+	    <groupId>com.shuffla.poker</groupId>
+	    <artifactId>Bot</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+  </dependencies>
+
+<build>
+    <plugins>
+    <plugin>
+    <!-- Build an executable JAR -->
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <configuration>
+    <archive>
+      <manifest>
+      <addClasspath>true</addClasspath>
+      <classpathPrefix>lib/</classpathPrefix>
+          <mainClass>com.shuffla.main.Main</mainClass>
+      </manifest>
+    </archive>
+     </configuration>
+    </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    </build>
+  
+</project>

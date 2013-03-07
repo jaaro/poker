@@ -9,11 +9,16 @@
   	<module>Bot</module>
   	<module>Main</module>
   	<module>Domain</module>
+  	<module>FunctionFinder</module>
   </modules>
   
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  
     <guice-version>3.0</guice-version>
     <commons-lang-version>3.1</commons-lang-version>
     <slf4j-log4j12-version>1.7.2</slf4j-log4j12-version>
+    <commons-math-version>3.1.1</commons-math-version>
   </properties>
 </project>

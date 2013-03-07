@@ -9,6 +9,7 @@ import com.shuffla.bot.Bot;
 import com.shuffla.bot.BotModule;
 import com.shuffla.bot.settings.BotSettings;
 import com.shuffla.bot.settings.BotSettingsImpl;
+import com.shuffla.poker.functionfinder.FunctionFinder;
 
 public class Main {
 
@@ -30,10 +31,21 @@ public class Main {
     }
     
     public void run() {
-	BotSettings settings = new BotSettingsImpl();
-	Injector injector = Guice.createInjector(new BotModule("Bocik", settings));
-	Bot bot = injector.getInstance(Bot.class);
-	bot.play(null);
+    	double[][] data = {
+    			{1, 2, 3},
+    			{4, 5, 6},
+    			{7, 8, 9}
+    	};
+    	
+    	double[] values = {6, 15, 24};
+    	
+    	FunctionFinder finder = new FunctionFinder();
+    	finder.find(data, values);
+    	
+		BotSettings settings = new BotSettingsImpl();
+		Injector injector = Guice.createInjector(new BotModule("Bocik", settings));
+		Bot bot = injector.getInstance(Bot.class);
+		bot.play(null);
     }
 
 }

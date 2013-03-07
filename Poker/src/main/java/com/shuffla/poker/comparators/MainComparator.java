@@ -14,7 +14,6 @@ public class MainComparator implements HandComparator {
 		this.classicalComparator = classicalComparator;
 	}
 
-	@Override
 	public int compare(GameType gameType, ListOfCards table,
 			ListOfCards player1, ListOfCards player2) {
 		

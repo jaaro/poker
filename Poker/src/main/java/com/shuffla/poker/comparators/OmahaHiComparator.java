@@ -5,7 +5,6 @@ import com.shuffla.poker.types.GameType;
 
 public class OmahaHiComparator implements HandComparator {
 
-	@Override
 	public int compare(GameType gameType, ListOfCards table,
 			ListOfCards player1, ListOfCards player2) {
 		// TODO Auto-generated method stub
